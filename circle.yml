@@ -3,7 +3,7 @@ machine:
     version: 3.6.1
 
   environment:
-    # The github organization or username of the repository which hosts the
+    # The github org anization or username of the repository which hosts the
     # project and documentation.
     USERNAME: "mcasl"
 
