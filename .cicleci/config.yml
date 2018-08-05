@@ -41,7 +41,7 @@ jobs:
         
       # run tests!
       # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
+      # other common Python testing f rameworks include pytest and nose
       # https://pytest.org
       # https://nose.readthedocs.io
       - run:
