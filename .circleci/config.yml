@@ -11,3 +11,4 @@ jobs:
     steps:
       - checkout
       - run: sudo -E apt-get -yq remove texlive-binaries --purge
+             sudo apt-get update
