@@ -10,25 +10,25 @@ jobs:
       - image: circleci/python:3.6.1
     steps:
       - checkout
-      - comand: sudo -E apt-get -yq remove texlive-binaries --purge
-      - run: sudo apt-get update
-      - run: sudo apt-get install libatlas-dev libatlas3gf-base
-      - run: sudo apt-get install build-essential python-dev python-setuptools
-    # install numpy first as it is a compile time dependency for other packages
-      - run: pip install numpy
-      - run: pip install --upgrade scipy
-      - run: pip install --upgrade matplotlib
-      - run: pip install --upgrade setuptools
-      - run: pip install --upgrade nose
-      - run: pip install --upgrade coverage
-      - run: pip install --upgrade sphinx
-      - run: pip install --upgrade pillow
-      - run: pip install --upgrade sphinx-gallery
-      - run: pip install --upgrade sphinx_rtd_theme
-      - run: pip install --upgrade networkx pandas
-    # Installing required packages for `make -C doc check command` to work.
-      - run: sudo -E apt-get -yq update
-      - run: sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install dvipng texlive-latex-base texlive-latex-extra
-      - run: pip install --upgrade cython numpydoc
-      - run: pip install --upgrade scikit-learn
-      - run: pip install --upgrade seaborn
+      - run: sudo -E apt-get -yq remove texlive-binaries --purge
+        run: sudo apt-get update
+        run: sudo apt-get install libatlas-dev libatlas3gf-base
+        run: sudo apt-get install build-essential python-dev python-setuptools
+      # install numpy first as it is a compile time dependency for other packages
+          command: pip install numpy
+          command: pip install --upgrade scipy
+          command: pip install --upgrade matplotlib
+          command: pip install --upgrade setuptools
+          command: pip install --upgrade nose
+          command: pip install --upgrade coverage
+          command: pip install --upgrade sphinx
+          command: pip install --upgrade pillow
+          command: pip install --upgrade sphinx-gallery
+          command: pip install --upgrade sphinx_rtd_theme
+          command: pip install --upgrade networkx pandas
+      # Installing required packages for `make -C doc check command` to work.
+          command: sudo -E apt-get -yq update
+          command: sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install dvipng texlive-latex-base texlive-latex-extra
+          command: pip install --upgrade cython numpydoc
+          command: pip install --upgrade scikit-learn
+          command: pip install --upgrade seaborn
