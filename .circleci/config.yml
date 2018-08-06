@@ -15,3 +15,4 @@ jobs:
         run: sudo apt-get install libatlas-dev libatlas3gf-base
         run: sudo apt-get install build-essential python-dev python-setuptools
       # install numpy first as it is a compile time dependency for other packages
+        run: pip install numpy
