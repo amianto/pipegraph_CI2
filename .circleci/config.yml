@@ -10,12 +10,12 @@ jobs:
       - image: circleci/python:3.6.1
     steps:
       - checkout
-      - run: sudo -E apt-get -yq remove texlive-binaries --purge
+      - comand: sudo -E apt-get -yq remove texlive-binaries --purge
       - run: sudo apt-get update
       - run: sudo apt-get install libatlas-dev libatlas3gf-base
       - run: sudo apt-get install build-essential python-dev python-setuptools
     # install numpy first as it is a compile time dependency for other packages
-      - run: pip install --upgrade numpy
+      - run: pip install numpy
       - run: pip install --upgrade scipy
       - run: pip install --upgrade matplotlib
       - run: pip install --upgrade setuptools
