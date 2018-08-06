@@ -24,7 +24,7 @@ jobs:
         run: sudo pip install --upgrade sphinx
         run: sudo pip install --upgrade pillow
         run: sudo pip install --upgrade sphinx-gallery
-        run: sudop ip install --upgrade sphinx_rtd_theme
+        run: sudo pip install --upgrade sphinx_rtd_theme
         run: sudo pip install --upgrade networkx pandas
       # Installing required packages for `make -C doc check command` to work.
         run: sudo -E apt-get -yq update
