@@ -37,3 +37,7 @@ jobs:
                 sudo pip install --upgrade cython numpydoc
                 sudo pip install --upgrade scikit-learn
                 sudo pip install --upgrade seaborn
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
+          paths:
+            - "venv"
