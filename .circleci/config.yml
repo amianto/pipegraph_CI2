@@ -10,8 +10,7 @@ jobs:
       - image: circleci/python:3.6.1
     steps:
       - checkout
-      - restore_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
+
       - run:
             name: Download dependencies
             command: |
@@ -38,7 +37,3 @@ jobs:
                 sudo pip install --upgrade cython numpydoc
                 sudo pip install --upgrade scikit-learn
                 sudo pip install --upgrade seaborn
-      - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
-          paths:
-            - "venv"
