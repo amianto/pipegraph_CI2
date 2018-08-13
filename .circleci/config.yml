@@ -38,9 +38,7 @@ jobs:
                 sudo pip install --upgrade seaborn
 
 
-                python setup.py clean
-                python setup.py develop
-                set -o pipefail && cd doc && make html 2>&1 | tee ~/log.txt
+
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
           paths:
