@@ -41,7 +41,3 @@ jobs:
                 sudo python setup.py develop
                 sudo set -o pipefail && cd doc && make html 2>&1 | tee ~/log.txt
 
-      - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
-          paths:
-            - "venv"
