@@ -46,8 +46,6 @@ jobs:
     machine:
         enabled: true
     working_directory: ~/master
-    environment:
-      HEROKU_APP: "sleepy-refuge-55486"
     steps:
       - checkout
       - run:
