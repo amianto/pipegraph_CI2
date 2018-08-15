@@ -4,8 +4,8 @@
 #
 
 version: 2
-jobs:
-  build:
+ build:
+   jobs:
     docker:
       - image: circleci/python:3.6.1
     steps:
@@ -55,6 +55,3 @@ jobs:
       - store_artifacts:
           path: doc/_build/html
           destination: ~/log.txt
-  branches:
-    ignore:
-      - gh-pages
