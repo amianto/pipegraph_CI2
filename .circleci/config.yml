@@ -52,3 +52,6 @@ jobs:
           name: Deploy Master
           command: |
             - bash ci_scripts/circleci/push_doc.sh
+      - store_artifacts:
+          path: doc/_build/html
+          destination: ~/log.txt
