@@ -44,4 +44,4 @@ jobs:
       - run:
             name: Grep error on the documentation
             command: |
-                - cat ~/log.txt && if grep -q "Traceback (most recent call last):" ~/log.txt; then false; else true; fi
+                 sudo cat ~/log.txt && if grep -q "Traceback (most recent call last):" ~/log.txt; then false; else true; fi
