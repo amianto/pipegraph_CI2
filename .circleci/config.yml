@@ -49,6 +49,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Deploy Master to Heroku
+          name: Deploy Master
           command: |
             - bash ci_scripts/circleci/push_doc.sh
