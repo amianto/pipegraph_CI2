@@ -55,3 +55,6 @@ jobs:
       - store_artifacts:
           path: doc/_build/html
           destination: ~/log.txt
+  branches:
+    ignore:
+      - gh-pages
