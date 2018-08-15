@@ -40,5 +40,9 @@ jobs:
                 - python setup.py clean
                 - python setup.py develop
                 - set -o pipefail && cd doc && make html 2>&1 | tee ~/log.txt
-
+  test:
+    steps:
+    - checkout
+    - run:
+          name: Grep error on the documentation
                 - cat ~/log.txt && if grep -q "Traceback (most recent call last):" ~/log.txt; then false; else true; fi
