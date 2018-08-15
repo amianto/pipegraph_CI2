@@ -36,8 +36,8 @@ jobs:
                 sudo pip install --upgrade cython numpydoc
                 sudo pip install --upgrade scikit-learn
                 sudo pip install --upgrade seaborn
-
-                sudo python setup.py clean
-                sudo python setup.py develop
-                sudo set -o pipefail && cd doc && make html 2>&1 | tee ~/log.txt
+            post:
+                - python setup.py clean
+                - python setup.py develop
+                - set -o pipefail && cd doc && make html 2>&1 | tee ~/log.txt
 
